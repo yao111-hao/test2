@@ -37,7 +37,7 @@
 /*! \def DEFAULT_PCIE_RESOURCE
  *  \brief 默认PCIe资源路径
  */
-#define DEFAULT_PCIE_RESOURCE "/sys/bus/pci/devices/0005:01:00.0/resource2" // /sys/bus/pci/devices/0005\:01\:00.0/resource2
+#define DEFAULT_PCIE_RESOURCE "/sys/bus/pci/devices/0000:d8:00.0/resource2"
 
 /*! \struct register_access_t
  *  \brief 寄存器访问配置结构体

@@ -37,7 +37,7 @@
 /*! \def DEFAULT_PCIE_RESOURCE
  *  \brief 默认PCIe资源路径
  */
-#define DEFAULT_PCIE_RESOURCE "/sys/bus/pci/devices/0005:01:00.0/resource2" // /sys/bus/pci/devices/0005\:01\:00.0/resource2
+#define DEFAULT_PCIE_RESOURCE "/sys/bus/pci/devices/0000:d8:00.0/resource2"
 
 /*! \def RESET_TIMEOUT_MS
  *  \brief 复位超时时间（毫秒）

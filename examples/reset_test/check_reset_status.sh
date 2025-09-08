@@ -7,4 +7,3 @@ if [ "$(id -u)" != "0" ]; then
 else
     ./reset_test --status --verbose
 fi
-
