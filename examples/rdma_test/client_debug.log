@@ -1,0 +1,269 @@
+src_ip_str = 192.168.33.103
+dst_ip_str = 192.168.33.102
+Info: mac_addr_t = 00:0a:35:a3:87:bd
+Info: PCIe resource file: /sys/bus/pci/devices/0005:01:00.0/resource2
+Info: QP allocated at: host_mem
+Info: Device - /dev/reconic-mm
+Info: Initial is over!!!
+Info: src_ip = 192.168.33.103
+Info: Found network interface: enP5p1s0
+Info: mac_addr_t = 00:0a:35:6a:29:d5
+Info: Creating rn_dev
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:307:create_rn_dev(): Info: scr(=4)) file open successfully
+create_rn_dev - testing2
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:152:get_buffer_paddr(): Info: get_buffer_paddr - Page frame: 0x208e00
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:157:get_buffer_paddr(): Info: get_buffer_paddr - distance from page boundary: 0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:161:get_buffer_paddr(): Info: get_buffer_paddr - Physical address of buffer: 0x208e00000
+Info: pre-allocated hugepage buffer vir addr = 0xffff99200000, physical addr = 0x208e00000
+Info: Configuring 8 windows in QDMA AXI bridge BDF, each has 128GB mapping
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:204:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_LSB=0x16420, bdf_addr_low=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:205:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_MSB=0x16424, bdf_addr_high=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:206:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_MAP_CONTROL_ADDR=0x16430, bdf_win_config=0xc2000000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:204:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_LSB=0x16440, bdf_addr_low=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:205:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_MSB=0x16444, bdf_addr_high=0x20
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:206:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_MAP_CONTROL_ADDR=0x16450, bdf_win_config=0xc2000000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:204:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_LSB=0x16460, bdf_addr_low=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:205:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_MSB=0x16464, bdf_addr_high=0x40
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:206:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_MAP_CONTROL_ADDR=0x16470, bdf_win_config=0xc2000000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:204:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_LSB=0x16480, bdf_addr_low=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:205:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_MSB=0x16484, bdf_addr_high=0x60
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:206:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_MAP_CONTROL_ADDR=0x16490, bdf_win_config=0xc2000000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:204:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_LSB=0x164a0, bdf_addr_low=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:205:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_MSB=0x164a4, bdf_addr_high=0x80
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:206:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_MAP_CONTROL_ADDR=0x164b0, bdf_win_config=0xc2000000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:204:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_LSB=0x164c0, bdf_addr_low=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:205:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_MSB=0x164c4, bdf_addr_high=0xa0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:206:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_MAP_CONTROL_ADDR=0x164d0, bdf_win_config=0xc2000000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:204:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_LSB=0x164e0, bdf_addr_low=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:205:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_MSB=0x164e4, bdf_addr_high=0xc0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:206:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_MAP_CONTROL_ADDR=0x164f0, bdf_win_config=0xc2000000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:204:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_LSB=0x16500, bdf_addr_low=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:205:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_ADDR_TRANSLATE_ADDR_MSB=0x16504, bdf_addr_high=0xe0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:206:config_rn_dev_axib_bdf(): [BDF] AXIB_BDF_MAP_CONTROL_ADDR=0x16510, bdf_win_config=0xc2000000
+Info: CREATE RDMA DEVICE
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:152:get_buffer_paddr(): Info: get_buffer_paddr - Page frame: 0x208e00
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:157:get_buffer_paddr(): Info: get_buffer_paddr - distance from page boundary: 0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:161:get_buffer_paddr(): Info: get_buffer_paddr - Physical address of buffer: 0x208e00000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:238:allocate_rdma_buffer(): Info: allocated host buffer vir addr = 0xffff99200000, physical addr = 208e00000, rn_dev->buffer_offset = 0x200000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:239:allocate_rdma_buffer(): Info: allocate_rdma_buffer - successfully allocated rdma host buffer
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:152:get_buffer_paddr(): Info: get_buffer_paddr - Page frame: 0x208c00
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:157:get_buffer_paddr(): Info: get_buffer_paddr - distance from page boundary: 0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:161:get_buffer_paddr(): Info: get_buffer_paddr - Physical address of buffer: 0x208c00000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:238:allocate_rdma_buffer(): Info: allocated host buffer vir addr = 0xffff99400000, physical addr = 208c00000, rn_dev->buffer_offset = 0x1200000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:239:allocate_rdma_buffer(): Info: allocate_rdma_buffer - successfully allocated rdma host buffer
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:152:get_buffer_paddr(): Info: get_buffer_paddr - Page frame: 0x207c00
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:157:get_buffer_paddr(): Info: get_buffer_paddr - distance from page boundary: 0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:161:get_buffer_paddr(): Info: get_buffer_paddr - Physical address of buffer: 0x207c00000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:238:allocate_rdma_buffer(): Info: allocated host buffer vir addr = 0xffff9a400000, physical addr = 207c00000, rn_dev->buffer_offset = 0x1202000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:239:allocate_rdma_buffer(): Info: allocate_rdma_buffer - successfully allocated rdma host buffer
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:152:get_buffer_paddr(): Info: get_buffer_paddr - Page frame: 0x207c02
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:157:get_buffer_paddr(): Info: get_buffer_paddr - distance from page boundary: 0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:161:get_buffer_paddr(): Info: get_buffer_paddr - Physical address of buffer: 0x207c02000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:238:allocate_rdma_buffer(): Info: allocated host buffer vir addr = 0xffff9a402000, physical addr = 207c02000, rn_dev->buffer_offset = 0x1212000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:239:allocate_rdma_buffer(): Info: allocate_rdma_buffer - successfully allocated rdma host buffer
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:152:get_buffer_paddr(): Info: get_buffer_paddr - Page frame: 0x207c12
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:157:get_buffer_paddr(): Info: get_buffer_paddr - distance from page boundary: 0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:161:get_buffer_paddr(): Info: get_buffer_paddr - Physical address of buffer: 0x207c12000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:238:allocate_rdma_buffer(): Info: allocated host buffer vir addr = 0xffff9a412000, physical addr = 207c12000, rn_dev->buffer_offset = 0x1222000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:239:allocate_rdma_buffer(): Info: allocate_rdma_buffer - successfully allocated rdma host buffer
+Info: OPEN RDMA DEVICE
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:186:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_DATBUFBA=0x600a0, value=0x8c00000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:188:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_DATBUFBAMSB=0x600a4, value=0x2
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:190:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_DATBUFSZ=0x600a8, value=0x10001000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:193:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_IPKTERRQBA=0x60088, value=0x7c00000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:195:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_IPKTERRQBAMSB=0x6008c, value=0x2
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:197:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_ERRBUFSZ=0x60090, value=0x2000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:200:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_ERRBUFBA=0x60060, value=0x7c02000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:202:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_ERRBUFBAMSB=0x60064, value=0x2
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:204:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_ERRBUFSZ=0x60068, value=0x1000100
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:207:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_RESPERRPKTBA=0x600b0, value=0x7c12000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:209:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_RESPERRPKTBAMSB=0x600b4, value=0x2
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:211:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_RESPERRSZ=0x600b8, value=0x10000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:213:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_RESPERRSZMSB=0x600bc, value=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:217:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_INTEN=0x60180, value=0xff
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:221:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_MACXADDLSB=0x60010, value=0x356a29d5
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:223:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_MACXADDMSB=0x60014, value=0xa
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:227:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_IPV4XADD=0x60070, value=0xc0a82167
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:230:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_XRNICCONF=0x60000, value=0x56ce0821
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:233:config_rdma_global_csr(): [Register] RN_RDMA_GCSR_XRNICADCONF=0x60004, value=0xa0004
+Info: RDMA global control status registers are configured.
+Info: rdma_dev opened
+Info: ALLOCATE PD
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:254:allocate_rdma_pd(): [Register] RN_RDMA_PDT_PDPDNUM=0x40000, pd_num=0, value=0x0
+Info: OPEN DEVICE FILE
+Info: ALLOCATE RDMA QP
+Allocating qp->sq
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:437:allocate_rdma_qp(): sq_size = 32768, cq_size = 2048, rq_size 262144, buf_location = host_mem
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:152:get_buffer_paddr(): Info: get_buffer_paddr - Page frame: 0x207c22
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:157:get_buffer_paddr(): Info: get_buffer_paddr - distance from page boundary: 0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:161:get_buffer_paddr(): Info: get_buffer_paddr - Physical address of buffer: 0x207c22000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:238:allocate_rdma_buffer(): Info: allocated host buffer vir addr = 0xffff9a422000, physical addr = 207c22000, rn_dev->buffer_offset = 0x122a000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:239:allocate_rdma_buffer(): Info: allocate_rdma_buffer - successfully allocated rdma host buffer
+Allocating qp->cq
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:152:get_buffer_paddr(): Info: get_buffer_paddr - Page frame: 0x207c2a
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:157:get_buffer_paddr(): Info: get_buffer_paddr - distance from page boundary: 0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:161:get_buffer_paddr(): Info: get_buffer_paddr - Physical address of buffer: 0x207c2a000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:238:allocate_rdma_buffer(): Info: allocated host buffer vir addr = 0xffff9a42a000, physical addr = 207c2a000, rn_dev->buffer_offset = 0x122a800
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:239:allocate_rdma_buffer(): Info: allocate_rdma_buffer - successfully allocated rdma host buffer
+Allocating qp->rq
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:152:get_buffer_paddr(): Info: get_buffer_paddr - Page frame: 0x207c2b
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:157:get_buffer_paddr(): Info: get_buffer_paddr - distance from page boundary: 0x0
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:161:get_buffer_paddr(): Info: get_buffer_paddr - Physical address of buffer: 0x207c2b000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:238:allocate_rdma_buffer(): Info: allocated host buffer vir addr = 0xffff9a42b000, physical addr = 207c2b000, rn_dev->buffer_offset = 0x126b000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:239:allocate_rdma_buffer(): Info: allocate_rdma_buffer - successfully allocated rdma host buffer
+Info: queue pair setting is done! Configuring RDMA per-queu CSR registers
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:485:allocate_rdma_qp(): DEBUG: rdma_dev->rn_dev->axil_ctl = 0xffffb9370000, rdma_dev->axil_ctl = 0xffffb9370000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:499:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_IPDESADDR1i=0x60360, qpid=2, value=0xc0a82166
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:506:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_MACDESADDLSBi=0x60350, qpid=2, value=0x35a387bd
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:513:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_MACDESADDMSBi=0x60354, qpid=2, value=0xa
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:519:allocate_rdma_qp(): DEBUG: win_size_high = 0xff, win_size_low = 0xffffffff
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:536:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_SQBAi=0x60310, qpid=2, value=0x7c22000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:543:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_SQBAMSBi=0x603c8, qpid=2, value=0x2
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:547:allocate_rdma_qp(): DEBUG: qp->sq->dma_addr = 0x207c22000, sq_addr_msb = 0x2, sq_addr_lsb = 0x7c22000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:565:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_CQBAi=0x60318, qpid=2, value=0x7c2a000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:572:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_CQBAMSBi=0x603d0, qpid=2, value=0x2
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:576:allocate_rdma_qp(): DEBUG: qp->cq->dma_addr = 0x207c2a000, cq_addr_msb = 0x2, cq_addr_lsb = 0x7c2a000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:594:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_RQBAi=0x60308, qpid=2, value=0x7c2b000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:601:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_RQBAMSBi=0x603c0, qpid=2, value=0x2
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:605:allocate_rdma_qp(): DEBUG: qp->rq->dma_addr = 0x207c2b000, rq_addr_msb = 0x2, rq_addr_lsb = 0x7c2b000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:614:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_CQDBADDi=0x60328, qpid=2, value=0x8e00000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:621:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_CQDBADDMSBi=0x6032c, qpid=2, value=0x2
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:625:allocate_rdma_qp(): DEBUG: cq_cidb_addr = 0x208e00000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:631:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_RQWPTRDBADDi=0x60320, qpid=2, value=0x8e00020
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:638:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_RQWPTRDBADDMSBi=0x60324, qpid=2, value=0x2
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:642:allocate_rdma_qp(): DEBUG: rq_cidb_addr = 0x208e00020
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:648:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_DESTQPCONFi=0x60348, qpid=2, value=0x2
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:657:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_QDEPTHi=0x6033c, qpid=2, value=0x400040
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:704:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_QPCONFi=0x60300, qpid=2, value=0x200043d
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:718:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_QPADVCONFi=0x60304, qpid=2, value=0x12344000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:727:allocate_rdma_qp(): [Register] RN_RDMA_QCSR_PDi=0x603b0, qpid=2, value=0x0
+Info: allocate_rdma_qp - Successfully allocated a rdma qp
+Info: CONFIGURE PSN
+[Register] RN_RDMA_QCSR_LSTRQREQi=0x60344, qpid=2, value=0xa000abc
+[Register] RN_RDMA_QCSR_SQPSNi=0x60340, qpid=2, value=0xabd
+payload_size = 128, payload_size>>2 = 32
+Info: Client is connecting to a remote server
+Info: Client is connected to a remote server
+Info: client received remote offset of A = 0xa350000000000000
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:262:allocate_rdma_buffer(): Info: allocated device buffer physical addr = a350000000000000, rn_dev->dev_buffer_offset = 0x80
+/home/user/workspace/software/driver/reconic-driver/lib/reconic.c:264:allocate_rdma_buffer(): Info: allocate_rdma_buffer - successfully allocated rdma device buffer
+Info: creating an RDMA read WQE for getting data
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:769:create_a_wqe(): Info: WQE mem_buffer = 0xa350000000000000, masked_mem_buffer = 0xa350000000000000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:796:create_a_wqe(): [WQE] wrid=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:797:create_a_wqe(): [WQE] laddr_low=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:798:create_a_wqe(): [WQE] laddr_high=0xa3500000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:799:create_a_wqe(): [WQE] length=0x80
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:800:create_a_wqe(): [WQE] opcode=0x4
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:801:create_a_wqe(): [WQE] remote_offset_low=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:802:create_a_wqe(): [WQE] remote_offset_high=0xa3500000
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:803:create_a_wqe(): [WQE] r_key=0x8
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:804:create_a_wqe(): [WQE] send_small_payload0=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:805:create_a_wqe(): [WQE] send_small_payload1=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:806:create_a_wqe(): [WQE] send_small_payload2=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:807:create_a_wqe(): [WQE] send_small_payload3=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:808:create_a_wqe(): [WQE] immdt_data=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:875:rdma_post_send(): DEBUG: Reading hardware SQPIi (0x60338) = 0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:876:rdma_post_send(): DEBUG: original qp->sq_pidb = 0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:882:rdma_post_send(): [Register] RN_RDMA_QCSR_SQPIi=0x60338, qpid=2, value=0x1
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:883:rdma_post_send(): DEBUG: Update hardware sq db idx from software = 1
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:884:rdma_post_send(): DEBUG: Reading hardware SQPIi (0x60338) = 0x1
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:844:poll_cq_cidb(): [Register] RN_RDMA_QCSR_CQHEADi=0x60330, qpid=2, value=0x1
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:846:poll_cq_cidb(): DEBUG: before polling: sq_cidb = 0; Polling CQ CIDB = 1
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:857:poll_cq_cidb(): DEBUG: after polling: sq_cidb = 0; Polling CQ CIDB = 1
+Successfully sent an RDMA read operation
+Info: Dump register values for debug purpose
+Info: [RN_RDMA_GCSR_ERRBUFWPTR      = 0x6006c] = 0x0
+Info: [RN_RDMA_GCSR_IPKTERRQWPTR    = 0x60094] = 0x0
+Info: [RN_RDMA_GCSR_INSRRPKTCNT     = 0x60100] = 0x0
+Info: [RN_RDMA_GCSR_INAMPKTCNT      = 0x60104] = 0x1
+Info: [RN_RDMA_GCSR_OUTIOPKTCNT     = 0x60108] = 0x10000
+Info: [RN_RDMA_GCSR_OUTAMPKTCNT     = 0x6010c] = 0x0
+Info: [RN_RDMA_GCSR_LSTINPKT        = 0x60110] = 0xabd0211
+Info: [RN_RDMA_GCSR_LSTOUTPKT       = 0x60114] = 0x157a200
+Info: [RN_RDMA_GCSR_ININVDUPCNT     = 0x60118] = 0x0
+Info: [RN_RDMA_GCSR_INNCKPKTSTS     = 0x6011c] = 0x0
+Info: [RN_RDMA_GCSR_OUTRNRPKTSTS    = 0x60120] = 0x0
+Info: [RN_RDMA_GCSR_WQEPROCSTS      = 0x60124] = 0x1012040
+Info: [RN_RDMA_GCSR_QPMSTS          = 0x6012c] = 0x10002
+Info: [RN_RDMA_GCSR_INALLDRPPKTCNT  = 0x60130] = 0x10000
+Info: [RN_RDMA_GCSR_INNAKPKTCNT     = 0x60134] = 0x0
+Info: [RN_RDMA_GCSR_OUTNAKPKTCNT    = 0x60138] = 0x0
+Info: [RN_RDMA_GCSR_RESPHNDSTS      = 0x6013c] = 0x10002
+Info: [RN_RDMA_GCSR_RETRYCNTSTS     = 0x60140] = 0x0
+Info: [RN_RDMA_GCSR_INCNPPKTCNT     = 0x60174] = 0x0
+Info: [RN_RDMA_GCSR_OUTCNPPKTCNT    = 0x60178] = 0x0
+Info: [RN_RDMA_GCSR_OUTRDRSPPKTCNT  = 0x6017c] = 0x0
+Info: [RN_RDMA_GCSR_INTSTS          = 0x60184] = 0x10
+Info: [RN_RDMA_GCSR_RQINTSTS1       = 0x60190] = 0x0
+Info: [RN_RDMA_GCSR_RQINTSTS2       = 0x60194] = 0x0
+Info: [RN_RDMA_GCSR_RQINTSTS3       = 0x60198] = 0x0
+Info: [RN_RDMA_GCSR_RQINTSTS4       = 0x6019c] = 0x0
+Info: [RN_RDMA_GCSR_RQINTSTS5       = 0x601a0] = 0x0
+Info: [RN_RDMA_GCSR_RQINTSTS6       = 0x601a4] = 0x0
+Info: [RN_RDMA_GCSR_RQINTSTS7       = 0x601a8] = 0x0
+Info: [RN_RDMA_GCSR_RQINTSTS8       = 0x601ac] = 0x0
+Info: [RN_RDMA_GCSR_CQINTSTS1       = 0x601b0] = 0x4
+Info: [RN_RDMA_GCSR_CQINTSTS2       = 0x601b4] = 0x0
+Info: [RN_RDMA_GCSR_CQINTSTS3       = 0x601b8] = 0x0
+Info: [RN_RDMA_GCSR_CQINTSTS4       = 0x601bc] = 0x0
+Info: [RN_RDMA_GCSR_CQINTSTS5       = 0x601c0] = 0x0
+Info: [RN_RDMA_GCSR_CQINTSTS6       = 0x601c4] = 0x0
+Info: [RN_RDMA_GCSR_CQINTSTS7       = 0x601c8] = 0x0
+Info: [RN_RDMA_GCSR_CQINTSTS8       = 0x601cc] = 0x0
+Info: [RN_RDMA_QCSR_CQHEADi         = 0x60330] = 0x1
+Info: [RN_RDMA_QCSR_STATSSNi        = 0x60380] = 0x1
+Info: [RN_RDMA_QCSR_STATMSNi        = 0x60384] = 0x0
+Info: [RN_RDMA_QCSR_STATQPi         = 0x60388] = 0x600
+Info: [RN_RDMA_QCSR_STATCURSQPTRi   = 0x6038c] = 0x1
+Info: [RN_RDMA_QCSR_STATRESPSNi     = 0x60390] = 0xabc
+Info: [RN_RDMA_QCSR_STATRQBUFCAi    = 0x60394] = 0x7c2b000
+Info: [RN_RDMA_QCSR_STATWQEi        = 0x60398] = 0x0
+Info: [RN_RDMA_QCSR_STATRQPIDBi     = 0x6039c] = 0x0
+Info: [RN_RDMA_QCSR_STATRQBUFCAMSBi = 0x603d8] = 0x2
+Info: [RN_RDMA_QCSR_SQPIi           = 0x60338] = 0x1
+
+Info: All data has been received!
+Info: buffer physical address is 0xa350000000000000
+Info: Time spent 19.839000 usec, size = 128 bytes, Bandwidth = 0.051616 gigabits/sec
+Info: The value of rc is 128
+
+===== DEBUG: DUMPING ALL RECEIVED DATA FROM CLIENT =====
+Info: received data: recv[0]=-1
+Info: received data: recv[1]=-1
+Info: received data: recv[2]=-1
+Info: received data: recv[3]=-1
+Info: received data: recv[4]=-1
+Info: received data: recv[5]=-1
+Info: received data: recv[6]=-1
+Info: received data: recv[7]=-1
+Info: received data: recv[8]=-1
+Info: received data: recv[9]=-1
+Info: received data: recv[10]=-1
+Info: received data: recv[11]=-1
+Info: received data: recv[12]=-1
+Info: received data: recv[13]=-1
+Info: received data: recv[14]=-1
+Info: received data: recv[15]=-1
+Info: received data: recv[16]=-1
+Info: received data: recv[17]=-1
+Info: received data: recv[18]=-1
+Info: received data: recv[19]=-1
+Info: received data: recv[20]=-1
+Info: received data: recv[21]=-1
+Info: received data: recv[22]=-1
+Info: received data: recv[23]=-1
+Info: received data: recv[24]=-1
+Info: received data: recv[25]=-1
+Info: received data: recv[26]=-1
+Info: received data: recv[27]=-1
+Info: received data: recv[28]=-1
+Info: received data: recv[29]=-1
+Info: received data: recv[30]=-1
+Info: received data: recv[31]=-1
+===== DEBUG: DUMP COMPLETE =====
+
+Info: CHECK RECEIVED DATA
+Error: received data mismatched: recv[0]=-1, sw_golden[0]=0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:1087:destroy_rdma_qp(): [DEBUG] Destroying dev: 0xffffb9370000, RN_RDMA_QCSR_CQHEADi=0x60330, qpid=2, value=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:1092:destroy_rdma_qp(): [DEBUG] Destroying dev: 0xffffb9370000, RN_RDMA_QCSR_CQHEADi=0x60330, qpid=2, value=0x0
+/home/user/workspace/software/driver/reconic-driver/lib/rdma_api.c:1100:destroy_rdma_qp(): [DEBUG] Destroying dev: 0xffffb9370000, RN_RDMA_QCSR_CQHEADi=0x60330, qpid=2, value=0x0
