@@ -4,7 +4,7 @@
 #
 #==============================================================================
 #
-# RecoNIC寄存器测试程序Makefile
+# RecoNIC复位功能测试程序Makefile
 # 支持x86_64和ARM64架构
 #
 #==============================================================================
@@ -42,8 +42,8 @@ LIBPATH = -L../../lib
 LIBS = -lreconic
 
 # 源文件和目标文件
-EXECUTABLE = register_test
-SOURCES = register_utils.c register_test.c
+EXECUTABLE = reset_test
+SOURCES = reset_utils.c reset_test.c
 OBJECTS = $(SOURCES:.c=.o)
 
 # 依赖检查
@@ -104,10 +104,13 @@ test: $(EXECUTABLE)
 	@echo "显示帮助信息:"
 	./$(EXECUTABLE) -h
 	@echo ""
-	@echo "测试完成。要进行实际硬件测试，请确保："
+	@echo "测试复位状态显示:"
+	./$(EXECUTABLE) --status || true
+	@echo ""
+	@echo "测试完成。要进行实际复位测试，请确保："
 	@echo "1. RecoNIC硬件已正确安装"
 	@echo "2. onic驱动已加载"
-	@echo "3. PCIe设备可访问"
+	@echo "3. 在维护窗口期间执行"
 
 # ARM架构特殊处理
 arm-optimize: CFLAGS += -O2 -DNDEBUG
@@ -127,7 +130,7 @@ release: clean all
 
 # 显示帮助
 help:
-	@echo "RecoNIC寄存器测试程序编译帮助"
+	@echo "RecoNIC复位功能测试程序编译帮助"
 	@echo ""
 	@echo "可用目标:"
 	@echo "  all          - 编译程序（默认）"

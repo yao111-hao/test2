@@ -22,7 +22,7 @@ echo -e "${BLUE}=== RecoNIC寄存器测试程序 - 编译与测试 ===${NC}\n"
 # 步骤1：编译libreconic库
 echo -e "${YELLOW}步骤1：编译RecoNIC用户空间库${NC}"
 echo "cd ../../lib && make"
-cd ../../lib && make clean && make
+cd ../../lib && make
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}✓ libreconic库编译成功${NC}\n"
 else
@@ -33,7 +33,7 @@ fi
 # 步骤2：编译寄存器测试程序
 echo -e "${YELLOW}步骤2：编译寄存器测试程序${NC}"
 echo "cd ../examples/register_test && make"
-cd ../examples/register_test && make clean && make
+cd ../examples/register_test && make
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}✓ 寄存器测试程序编译成功${NC}\n"
 else
@@ -43,7 +43,7 @@ fi
 
 # 步骤3：设置库路径
 echo -e "${YELLOW}步骤3：设置库路径${NC}"
-export LD_LIBRARY_PATH=/home/user/workspace/software/driver/reconic_2/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/workspace/lib:$LD_LIBRARY_PATH
 echo "export LD_LIBRARY_PATH=/workspace/lib:\$LD_LIBRARY_PATH"
 echo -e "${GREEN}✓ 库路径设置完成${NC}\n"
 
@@ -114,7 +114,7 @@ echo ""
 # 步骤9：故障排除
 echo -e "${YELLOW}步骤9：常见问题解决${NC}"
 echo -e "${BLUE}问题1：libreconic.so找不到${NC}"
-echo "解决：export LD_LIBRARY_PATH=/home/user/workspace/software/driver/reconic_2/lib:$LD_LIBRARY_PATH"
+echo "解决：export LD_LIBRARY_PATH=/workspace/lib:\$LD_LIBRARY_PATH"
 echo ""
 echo -e "${BLUE}问题2：权限不足${NC}"
 echo "解决：使用 sudo env LD_LIBRARY_PATH=\$LD_LIBRARY_PATH ./register_test ..."

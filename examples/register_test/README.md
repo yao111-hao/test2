@@ -67,7 +67,7 @@ sudo ./register_test [选项]
 | 选项 | 长选项 | 参数 | 描述 |
 |------|--------|------|------|
 | -d | --device | 设备路径 | 字符设备名称（默认：/dev/reconic-mm） |
-| -p | --pcie_resource | 资源路径 | PCIe资源路径（默认：/sys/bus/pci/devices/0000:d8:00.0/resource2） |
+| -p | --pcie_resource | 资源路径 | PCIe资源路径（默认：/sys/bus/pci/devices/0005\:01\:00.0/resource2） |
 | -r | --read | 寄存器地址 | 读取指定偏移地址的寄存器 |
 | -w | --write | 寄存器地址 | 写入指定偏移地址的寄存器（需配合-v） |
 | -v | --value | 寄存器值 | 指定要写入的寄存器值 |
