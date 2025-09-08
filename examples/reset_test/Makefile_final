@@ -1,0 +1,148 @@
+# ==============================================================================
+# Copyright (C) 2023, Advanced Micro Devices, Inc. All rights reserved.
+# SPDX-License-Identifier: MIT
+# ==============================================================================
+#
+# 最终修复版复位功能测试程序Makefile
+# 基于Verilog代码分析的完整修复版本
+#
+# ==============================================================================
+
+CC ?= gcc
+ARCH := $(shell uname -m)
+
+# 基本编译标志
+CFLAGS = -g -Wall -Wextra -std=gnu99 -fPIC
+
+# 架构特定优化
+ifeq ($(ARCH),x86_64)
+    CFLAGS += -march=native -mtune=native
+    ARCH_DEFINES = -D__X86_64__
+else ifeq ($(ARCH),aarch64)
+    CFLAGS += -mcpu=native -mtune=native
+    ARCH_DEFINES = -D__AARCH64__
+else ifneq (,$(findstring arm,$(ARCH)))
+    CFLAGS += -mcpu=native -mtune=native  
+    ARCH_DEFINES = -D__ARM__
+else
+    ARCH_DEFINES = -D__UNKNOWN_ARCH__
+endif
+
+CFLAGS += $(ARCH_DEFINES)
+
+# 包含路径
+INCLUDES = -I. -I../../lib
+
+# 库路径和链接库
+LIBPATH = -L../../lib
+LIBS = -lreconic
+
+# 最终修复版源文件
+FINAL_SOURCES = reset_utils.c reset_utils_fixed.c reset_utils_final.c test_final_reset.c
+FINAL_OBJECTS = $(FINAL_SOURCES:.c=.o)
+FINAL_EXECUTABLE = test_final_reset
+
+# 依赖检查
+LIBRECONIC_PATH = ../../lib/libreconic.a
+
+# 默认目标：编译最终修复版
+final: check_deps $(FINAL_EXECUTABLE)
+
+# 检查依赖库
+check_deps:
+	@echo "=== 编译最终修复版复位程序 ==="
+	@echo "架构: $(ARCH)"
+	@echo "编译标志: $(CFLAGS)"
+	@if [ ! -f "$(LIBRECONIC_PATH)" ]; then \
+		echo "编译libreconic库..."; \
+		$(MAKE) -C ../../lib || exit 1; \
+	fi
+	@echo "依赖检查完成"
+
+# 生成最终修复版可执行文件
+$(FINAL_EXECUTABLE): $(FINAL_OBJECTS)
+	@echo "链接最终修复版..."
+	$(CC) $(FINAL_OBJECTS) -o $@ $(LIBPATH) $(LIBS)
+	@echo "✓ 最终修复版编译完成: $(FINAL_EXECUTABLE)"
+	@echo "✓ 架构: $(ARCH)"
+	@file $(FINAL_EXECUTABLE) 2>/dev/null || true
+	@echo ""
+	@echo "=== 基于Verilog分析的关键修复 ==="
+	@echo "1. 复位寄存器自清除等待机制"
+	@echo "2. CMAC子系统和适配器同时复位"
+	@echo "3. 正确的硬件复位完成检测"
+	@echo "4. 适配ARM和x86_64架构"
+	@echo "================================"
+
+# 编译对象文件
+%.o: %.c
+	@echo "编译 $<..."
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+# 清理最终版
+clean-final:
+	@echo "清理最终修复版编译文件..."
+	rm -f $(FINAL_OBJECTS) $(FINAL_EXECUTABLE)
+
+# 完整测试（需要root权限）
+test-final: $(FINAL_EXECUTABLE)
+	@echo "=== 最终修复版功能测试 ==="
+	@if [ "$(shell id -u)" != "0" ]; then \
+		echo "需要root权限进行硬件测试"; \
+		echo "请使用: sudo make test-final"; \
+		exit 1; \
+	fi
+	@export LD_LIBRARY_PATH=../../lib:$$LD_LIBRARY_PATH && \
+	echo "1. 显示帮助信息:" && \
+	./$(FINAL_EXECUTABLE) -h && \
+	echo "2. 硬件状态诊断:" && \
+	./$(FINAL_EXECUTABLE) --diagnose && \
+	echo "测试完成！"
+
+# 快速诊断（便利目标）
+diagnose: $(FINAL_EXECUTABLE)
+	@if [ "$(shell id -u)" != "0" ]; then \
+		echo "需要root权限，使用sudo..."; \
+		sudo env LD_LIBRARY_PATH=../../lib:$$LD_LIBRARY_PATH ./$(FINAL_EXECUTABLE) --diagnose; \
+	else \
+		export LD_LIBRARY_PATH=../../lib:$$LD_LIBRARY_PATH && ./$(FINAL_EXECUTABLE) --diagnose; \
+	fi
+
+# 智能复位（便利目标）
+smart-reset: $(FINAL_EXECUTABLE)
+	@if [ "$(shell id -u)" != "0" ]; then \
+		echo "需要root权限，使用sudo..."; \
+		sudo env LD_LIBRARY_PATH=../../lib:$$LD_LIBRARY_PATH ./$(FINAL_EXECUTABLE) --smart; \
+	else \
+		export LD_LIBRARY_PATH=../../lib:$$LD_LIBRARY_PATH && ./$(FINAL_EXECUTABLE) --smart; \
+	fi
+
+# 创建测试脚本
+create-scripts: $(FINAL_EXECUTABLE)
+	@echo "创建便利测试脚本..."
+	@echo '#!/bin/bash' > final_test.sh
+	@echo 'export LD_LIBRARY_PATH=/workspace/lib:$$LD_LIBRARY_PATH' >> final_test.sh
+	@echo 'cd /workspace/examples/reset_test' >> final_test.sh
+	@echo 'sudo ./test_final_reset --diagnose' >> final_test.sh
+	@chmod +x final_test.sh
+	@echo "✓ 便利脚本已创建: ./final_test.sh"
+
+# 显示使用说明
+usage-final:
+	@echo "=== 最终修复版使用指南 ==="
+	@echo ""
+	@echo "编译："
+	@echo "  make final                    # 编译最终修复版"
+	@echo ""
+	@echo "测试："
+	@echo "  make diagnose                 # 快速诊断（推荐第一步）"
+	@echo "  make smart-reset              # 智能复位策略"
+	@echo "  sudo make test-final          # 完整功能测试"
+	@echo ""
+	@echo "手动使用："
+	@echo "  sudo ./test_final_reset --diagnose"
+	@echo "  sudo ./test_final_reset --smart"
+	@echo "  sudo ./test_final_reset --cmac-port 0"
+	@echo ""
+
+.PHONY: final clean-final test-final diagnose smart-reset create-scripts usage-final check_deps
