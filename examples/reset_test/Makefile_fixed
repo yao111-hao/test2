@@ -1,0 +1,30 @@
+# Makefile for testing fixed reset functionality
+
+CC ?= gcc
+CFLAGS = -g -Wall -Wextra -std=gnu99 -fPIC
+INCLUDES = -I. -I../../lib
+LIBPATH = -L../../lib
+LIBS = -lreconic
+
+# Source files for fixed version test
+FIXED_SOURCES = reset_utils.c reset_utils_fixed.c test_fixed_reset.c
+FIXED_OBJECTS = $(FIXED_SOURCES:.c=.o)
+FIXED_EXECUTABLE = test_fixed_reset
+
+# Build fixed version
+fixed: $(FIXED_EXECUTABLE)
+
+$(FIXED_EXECUTABLE): $(FIXED_OBJECTS)
+	@echo "编译修复版复位测试程序..."
+	$(CC) $(FIXED_OBJECTS) -o $@ $(LIBPATH) $(LIBS)
+	@echo "修复版编译完成: $(FIXED_EXECUTABLE)"
+
+%.o: %.c
+	@echo "编译 $<..."
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+clean-fixed:
+	@echo "清理修复版编译文件..."
+	rm -f $(FIXED_OBJECTS) $(FIXED_EXECUTABLE)
+
+.PHONY: fixed clean-fixed
